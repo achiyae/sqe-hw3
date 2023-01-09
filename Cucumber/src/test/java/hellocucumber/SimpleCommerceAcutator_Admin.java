@@ -47,6 +47,9 @@ public class SimpleCommerceAcutator_Admin {
         // locate Log in button and press
         // $x("//*[@id='loginbtn']")
         driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/section/form/div[5]/div/button")).click();
+
+        //add products to the store by template
+        driver.findElement(By.xpath("/html/body/div[4]/div[5]/form/div/div[3]/button")).click();
     }
 
 //    public void teacherWelcomeMessage(){
@@ -105,7 +108,7 @@ public class SimpleCommerceAcutator_Admin {
     public void delete_product_from_store(){
 //        search_from_catalog(product_to_delete);
 //      press on delete bottom
-        driver.findElement(By.xpath("/html/body/div[2]/div/table/tbody[1]/tr/td[10]/button[2]/span")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div/table/tbody[1]/tr/td[10]/button[2]")).click();
 //      press ok bottom to confirm deleting
 //        driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/button[2]")).click();
 //        /html/body/div[3]/div/div/div[2]/button[2]
@@ -118,6 +121,7 @@ public class SimpleCommerceAcutator_Admin {
 //        driver.findElement(By.xpath("/html/body/div[2]/div/table/tbody[1]/tr/td[10]/button[1]/span")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div/table/tbody[1]/tr/td[10]/button[1]/span"))).click();
     }
+
     public void loginSequence(String Email, String password){
         // locate and click on web element -> login
         goToLogin();

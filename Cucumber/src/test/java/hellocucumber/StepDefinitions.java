@@ -12,7 +12,7 @@ public class StepDefinitions {
     private static SimpleCommerceAcutator_user user;
     private static SimpleCommerceAcutator_Admin admin;
     private String webDriver = "webdriver.chrome.driver";
-    private String path = "C:\\Users\\nita1\\IdeaProjects\\sqe-hw3-main\\Selenium\\chromedriver.exe";
+    private String path = "C:\\Users\\ItamarZafran\\Desktop\\ProgramingWorksAcademe\\Semester_5\\Software_quality\\sqe-hw3\\Selenium\\chromedriver.exe";
     public void simple_commerece(){
         user= new SimpleCommerceAcutator_user();
         user.initSession(webDriver,path);
@@ -81,10 +81,15 @@ public class StepDefinitions {
 //    }
 //
 //
-    @When("Admin un publish the product from the catalog")
-    public void unpublish_product(){
-        admin.un_publish_product_from_store();
+//    @When("Admin un publish the product from the catalog")
+//    public void unpublish_product(){
+//        admin.un_publish_product_from_store();
+//    }
+    @When("Admin delete the product from the catalog")
+    public void delete_product(){
+        admin.delete_product_from_store();
     }
+//    }
     @When("User navigate to cart")
     public void navigate_to_cart(){
         user.view_product_cart();

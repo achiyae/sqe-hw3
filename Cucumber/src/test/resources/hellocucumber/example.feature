@@ -32,7 +32,7 @@ Feature: A set of scenarios for testing the "example" module
 #    |product|
 #    |"Converse All Star Hi Plimsolls"|
   Scenario: Admin successful deleting
-    When Admin un publish the product from the catalog
+    When Admin delete the product from the catalog
     And User navigate to cart
     And "Not available any more" message displays in the cart
     Then Message displayed un publish successful
